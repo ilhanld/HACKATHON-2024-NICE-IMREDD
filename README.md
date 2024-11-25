@@ -1,60 +1,66 @@
-# Projet Code4Sud - TeamOne
+# 🌍 - RiskyQuest 
+## Educate yourself about climate disasters
 
-Bienvenue sur Nom du Projet ! Ce projet est composé d'un frontend et d'un backend, tous deux containerisés à l'aide de Docker et orchestrés avec Docker Compose. Le frontend est une application React servie par Nginx, tandis que le backend est un serveur Node.js utilisant SQLite3 pour le stockage des données.
+ClimateAware is an interactive web application created during a hackathon on the theme of climate disasters. This project aims to raise users' awareness of extreme weather events while allowing them to learn via an educational quiz.
 
-# Structure du Projet
+## 🚀 - Main features
+Interactive map:
+
+Click on a point on the map to display climate disasters specific to that area (hurricanes, fires, floods, etc.).
+The data is provided in real time using a dedicated API.
+Educational quiz:
+
+For each climate disaster, a quiz is offered to help you better understand its causes, impacts and possible solutions.
+Get a score to assess your level of awareness.
+Modern interface:
+
+Developed with React for a fast, fluid user experience.
+Robust backend:
+
+Managed with Express.js, it collects and transmits data on climate disasters from reliable sources.
+
+## 🛠️ Technologies utilisées
+
+### Front
+![](https://i.imgur.com/DUAYEFv.png)
+
+### Backend
+![](https://i.imgur.com/gm8q2D4.png)
+
+## 📥 Installation
+### Requirements
+
+ - Node.js (version 16+ recommended)
+ - npm or yarn to manage dependencies
+
+Clone the project repository :
+
+    git clone [REPOS NAME]
+    cd [REPOS NAME]
+
+install the dependencies for the backend :
+
+    cd backend
+    npm install
+
+Install the dependencies for the frontend :
+
+    cd ../frontend
+    npm install
+
+# 🏗️ - Project Structure
 ```
 project-root/
 │
-├── docker-compose.yml        # Orchestration des services Docker
-├── front/                    # Code source du frontend (React)
-│   ├── Dockerfile            # Dockerfile pour construire le frontend
-│	├── nginx.conf            # Configuration Nginx pour le frontend
-│   ├── package.json          # Dépendances du frontend
-│   ├── ... autres fichiers
+├── docker-compose.yml # Orchestration of Docker services
+├── front/ # Frontend source code (React)
+│ ├── Dockerfile # Dockerfile to build the frontend
+│ ├── nginx.conf # Nginx configuration for the frontend
+│ ├── package.json # Frontend dependencies
+│ ├── ... other files
 │
-└── back/                     # Code source du backend (Node.js)
-	├── Dockerfile            # Dockerfile pour construire le backend
-	├── package.json          # Dépendances du backend
-	├── ... autres fichiers
+└── back/ # Backend source code (Node.js)
+	├── Dockerfile # Dockerfile to build the backend
+	├── package.json # Backend dependencies
+	├── ... other files
 ```
-# Technologies Utilisées
-- Frontend : React, servi avec Nginx
-- Backend : Node.js (Express), SQLite3 pour la persistance des données
-- Docker : Containerisation du frontend et du backend
-- Docker Compose : Pour gérer les applications multi-conteneurs
-
-# Commencer
-
-Prérequis
-Docker installé. Télécharger Docker ici.
-Docker Compose installé. Docker Desktop inclut déjà Docker Compose.
-Node.js et npm pour le développement et les tests locaux.
-
-Installation
-
-1 - Cloner le Répertoire
-```bash
-	git clone https://github.com/wnaiji/teamOne.git
-	cd teamOne
-```
-Exécution du Projet
-Le projet est containerisé avec Docker, vous pouvez donc facilement exécuter à la fois le frontend et le backend en utilisant Docker Compose.
-
-1 - Construire et Démarrer les Conteneurs
-```bash
-	docker compose up --build
-```
-	Cette commande va :
-	Construire les images Docker pour le frontend et le backend.
-	Démarrer les deux conteneurs en mode détaché.
-
-2 - Accéder aux Services
-
-- Frontend : http//localhost:80
-- Backend : http//localhost:8000
-
-3 - Arrêter les Conteneurs
-	Pour arrêter les services, exécutez :
-
-	docker compose down
